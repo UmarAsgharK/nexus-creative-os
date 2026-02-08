@@ -69,7 +69,7 @@ const InteractiveDemo = () => {
   ]
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -98,8 +98,8 @@ const InteractiveDemo = () => {
                     key={tab.id}
                     onClick={() => setActiveTab(index)}
                     className={`w-full text-left p-4 rounded-lg transition-all duration-300 relative overflow-hidden ${isActive
-                        ? 'bg-primary-600 text-white shadow-lg'
-                        : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
+                      ? 'bg-primary-600 text-white shadow-lg'
+                      : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
                       }`}
                     whileHover={{ x: isActive ? 0 : 5 }}
                     whileTap={{ scale: 0.98 }}
