@@ -38,7 +38,7 @@ const FeatureShowcase = () => {
   ]
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -79,7 +79,7 @@ const FeatureShowcase = () => {
                     transition={{ duration: 0.3, type: 'spring', stiffness: 200 }}
                   >
                     <motion.div
-                      animate={{ 
+                      animate={{
                         scale: isHovered ? 1.1 : 1,
                         rotate: isHovered ? 5 : 0,
                       }}
@@ -117,13 +117,13 @@ const FeatureShowcase = () => {
                       </motion.li>
                     ))}
                   </ul>
-                  
+
                   {/* Benefits on Hover */}
                   <motion.div
                     initial={{ height: 0, opacity: 0 }}
-                    animate={{ 
-                      height: isHovered ? 'auto' : 0, 
-                      opacity: isHovered ? 1 : 0 
+                    animate={{
+                      height: isHovered ? 'auto' : 0,
+                      opacity: isHovered ? 1 : 0
                     }}
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"

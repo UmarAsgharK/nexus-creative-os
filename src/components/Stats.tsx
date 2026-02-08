@@ -68,7 +68,7 @@ const Stats = () => {
   ]
 
   return (
-    <section ref={ref} className="py-16 bg-gray-100">
+    <section ref={ref} className="py-16 dark-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
           {stats.map((stat, index) => {
@@ -83,7 +83,7 @@ const Stats = () => {
                 whileHover={{ y: -5, scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <motion.div 
+                <motion.div
                   className={`w-12 h-12 rounded-lg bg-gradient-to-br ${stat.color} flex items-center justify-center mb-4`}
                   whileHover={{ rotate: 360, scale: 1.1 }}
                   transition={{ duration: 0.5 }}

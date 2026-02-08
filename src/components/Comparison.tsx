@@ -53,7 +53,7 @@ const Comparison = () => {
   ]
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -102,7 +102,6 @@ const Comparison = () => {
                       transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
                       className={`border-b border-gray-200 transition-colors cursor-pointer relative ${isHovered ? 'bg-primary-50/50' : 'hover:bg-gray-50'
                         }`}
-                      whileHover={{ x: 3 }}
                       onHoverStart={() => setHoveredRow(index)}
                       onHoverEnd={() => setHoveredRow(null)}
                     >

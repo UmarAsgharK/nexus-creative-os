@@ -38,7 +38,7 @@ const HowItWorks = () => {
   ]
 
   return (
-    <section id="how-it-works" className="py-20 bg-gray-50">
+    <section id="how-it-works" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -73,19 +73,17 @@ const HowItWorks = () => {
                   onHoverStart={() => setHoveredStep(index)}
                   onHoverEnd={() => setHoveredStep(null)}
                 >
-                  <motion.div 
-                    className={`bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 border-2 text-center cursor-pointer overflow-hidden ${
-                      isHovered ? 'border-primary-600' : 'border-gray-200'
-                    }`}
+                  <motion.div
+                    className={`bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 border-2 text-center cursor-pointer relative ${isHovered ? 'border-primary-600' : 'border-gray-200'
+                      }`}
                     whileHover={{ y: -5, scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
                     {/* Number Badge */}
                     <div className="absolute -top-6 left-1/2 transform -translate-x-1/2">
-                      <motion.div 
-                        className={`w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg ${
-                          isHovered ? 'bg-primary-600' : 'bg-gray-400'
-                        }`}
+                      <motion.div
+                        className={`w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg ${isHovered ? 'bg-primary-600' : 'bg-gray-400'
+                          }`}
                         animate={{ scale: isHovered ? 1.1 : 1 }}
                         transition={{ duration: 0.3 }}
                       >
@@ -94,9 +92,9 @@ const HowItWorks = () => {
                     </div>
 
                     {/* Icon */}
-                    <motion.div 
+                    <motion.div
                       className={`w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br ${step.color} flex items-center justify-center mt-4`}
-                      animate={{ 
+                      animate={{
                         scale: isHovered ? 1.1 : 1,
                         rotate: isHovered ? 5 : 0,
                       }}
@@ -111,7 +109,7 @@ const HowItWorks = () => {
                     <p className="text-gray-600 leading-relaxed text-base mb-4">
                       {step.description}
                     </p>
-                    
+
                     {/* Time Badge */}
                     <div className="inline-flex items-center gap-1 px-3 py-1 bg-gray-100 rounded-full text-xs font-medium text-gray-700 mb-4">
                       <CheckCircle size={12} />
@@ -121,9 +119,9 @@ const HowItWorks = () => {
                     {/* Expanded Details on Hover */}
                     <motion.div
                       initial={false}
-                      animate={{ 
-                        height: isHovered ? 'auto' : 0, 
-                        opacity: isHovered ? 1 : 0 
+                      animate={{
+                        height: isHovered ? 'auto' : 0,
+                        opacity: isHovered ? 1 : 0
                       }}
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden"

@@ -13,11 +13,6 @@ const Integrations = () => {
     { name: 'Gmail', icon: Mail, color: 'from-red-500 to-pink-500' },
     { name: 'Calendar', icon: Calendar, color: 'from-blue-500 to-cyan-500' },
     { name: 'Docs', icon: FileText, color: 'from-green-500 to-emerald-500' },
-    { name: 'GitHub', icon: Github, color: 'from-gray-800 to-gray-900' },
-    { name: 'Slack', icon: Slack, color: 'from-purple-600 to-pink-600' },
-    { name: 'Zapier', icon: Zap, color: 'from-orange-500 to-red-500' },
-    { name: 'Gmail', icon: Mail, color: 'from-red-500 to-pink-500' },
-    { name: 'Calendar', icon: Calendar, color: 'from-blue-500 to-cyan-500' },
     { name: 'Docs', icon: FileText, color: 'from-green-500 to-emerald-500' },
   ]
 
@@ -47,8 +42,8 @@ const Integrations = () => {
                 key={index}
                 initial={{ opacity: 0, scale: 0 }}
                 animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 1, scale: 1 }}
-                transition={{ 
-                  duration: 0.4, 
+                transition={{
+                  duration: 0.4,
                   delay: index * 0.05,
                   type: 'spring',
                   stiffness: 200

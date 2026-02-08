@@ -69,7 +69,7 @@ const InteractiveDemo = () => {
   ]
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -97,11 +97,10 @@ const InteractiveDemo = () => {
                   <motion.button
                     key={tab.id}
                     onClick={() => setActiveTab(index)}
-                    className={`w-full text-left p-4 rounded-lg transition-all duration-300 relative overflow-hidden ${
-                      isActive
+                    className={`w-full text-left p-4 rounded-lg transition-all duration-300 relative overflow-hidden ${isActive
                         ? 'bg-primary-600 text-white shadow-lg'
                         : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
-                    }`}
+                      }`}
                     whileHover={{ x: isActive ? 0 : 5 }}
                     whileTap={{ scale: 0.98 }}
                   >
@@ -144,7 +143,7 @@ const InteractiveDemo = () => {
                     whileHover={{ y: -2 }}
                   >
                     <div className="flex items-start justify-between mb-6">
-                      <motion.div 
+                      <motion.div
                         className={`w-16 h-16 rounded-xl bg-gradient-to-br ${tab.color} flex items-center justify-center shadow-lg`}
                         whileHover={{ scale: 1.1, rotate: 5 }}
                         transition={{ duration: 0.3 }}
@@ -168,14 +167,14 @@ const InteractiveDemo = () => {
                     </p>
                     <ul className="space-y-3">
                       {tab.features.map((feature, i) => (
-                        <motion.li 
-                          key={i} 
+                        <motion.li
+                          key={i}
                           className="flex items-start gap-3"
                           initial={{ opacity: 0, x: -10 }}
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ delay: 0.1 + i * 0.05 }}
                         >
-                          <motion.div 
+                          <motion.div
                             className={`w-6 h-6 rounded-full bg-gradient-to-br ${tab.color} flex items-center justify-center flex-shrink-0 mt-0.5`}
                             whileHover={{ scale: 1.2, rotate: 360 }}
                             transition={{ duration: 0.3 }}
