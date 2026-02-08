@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Menu, X, ChevronDown } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -26,8 +26,8 @@ const Navigation = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${isScrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-md border-b border-gray-100'
-          : 'bg-white/90 backdrop-blur-sm'
+        ? 'bg-white/95 backdrop-blur-md shadow-md border-b border-gray-100'
+        : 'bg-white/90 backdrop-blur-sm'
         }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

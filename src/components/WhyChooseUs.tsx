@@ -1,6 +1,6 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
-import { DollarSign, TrendingUp, Award, CheckCircle2 } from 'lucide-react'
+import { TrendingUp, Award, CheckCircle2 } from 'lucide-react'
 
 const WhyChooseUs = () => {
   const ref = useRef(null)
