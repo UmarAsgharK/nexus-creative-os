@@ -7,36 +7,28 @@ const FAQ = () => {
 
   const faqs = [
     {
-      question: 'How does the free trial work?',
-      answer: 'You can start a 14-day free trial with full access to all features. No credit card required. After the trial, you can choose to continue with a paid plan or your account will be paused. You can cancel anytime during the trial.',
+      question: 'Does Nexus work with existing projects?',
+      answer: 'Yes! Nexus can ingest your existing CSS/Tailwind configuration and map it back to a new design system. You don\'t need to start from scratch.',
     },
     {
-      question: 'What integrations are available?',
-      answer: 'Our platform integrates with 100+ popular tools including Slack, Microsoft Teams, Jira, GitHub, Google Workspace, Notion, Trello, Asana, and many more. We also offer custom integrations for Enterprise plans.',
+      question: 'Which design tools do you support?',
+      answer: 'We currently have deep two-way integration with Figma. Sketch and Adobe XD support is in beta and coming soon to all users.',
     },
     {
-      question: 'Is my data secure?',
-      answer: 'Absolutely. We use bank-level encryption (AES-256), comply with SOC 2 Type II, GDPR, and HIPAA standards. Your data is stored in secure, encrypted databases and we never share your information with third parties.',
+      question: 'Is the generated code actually usable?',
+      answer: 'Absolutely. We pride ourselves on "Clean Code" generation. Nexus produces semantic, accessible, and type-safe code that looks like it was written by a senior engineer.',
     },
     {
-      question: 'Can I change plans later?',
-      answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we\'ll prorate any charges or credits to your account.',
+      question: 'Can I host Nexus on-premise?',
+      answer: 'Yes, Enterprise plans include the option for self-hosting Nexus within your own VPC for complete data sovereignty and security.',
     },
     {
-      question: 'Do you offer discounts for annual plans?',
-      answer: 'Yes! Annual plans save you 20% compared to monthly billing. You\'ll see the savings reflected in your pricing when you select the yearly option.',
+      question: 'How does Visual Version Control work?',
+      answer: 'Just like Git. You create a "branch" of your design system to make changes. When you\'re ready, you open a Pull Request where teammates can review visual diffs before merging.',
     },
     {
-      question: 'What kind of support do you provide?',
-      answer: 'Starter plans include email support with 24-hour response time. Professional plans get priority support with faster response times. Enterprise plans include dedicated support with a dedicated account manager and custom training.',
-    },
-    {
-      question: 'Can I cancel my subscription anytime?',
-      answer: 'Yes, you can cancel your subscription at any time from your account settings. There are no cancellation fees, and you\'ll continue to have access until the end of your billing period.',
-    },
-    {
-      question: 'How does the AI automation work?',
-      answer: 'Our AI learns from your team\'s patterns and workflows to suggest and automate repetitive tasks. You can create custom automation rules, and the AI will help optimize them over time. All automations can be reviewed and approved before execution.',
+      question: 'Do you support mobile apps?',
+      answer: 'Yes! Nexus exports native code for iOS (SwiftUI) and Android (Jetpack Compose), as well as React Native and Flutter.',
     },
   ]
 

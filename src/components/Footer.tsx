@@ -37,9 +37,9 @@ const Footer = () => {
           <div className="col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">P</span>
+                <span className="text-white font-bold text-xl">N</span>
               </div>
-              <span className="text-xl font-bold text-white">Platform</span>
+              <span className="text-xl font-bold text-white">Nexus</span>
             </div>
             <p className="text-gray-400 mb-6 max-w-xs">
               Comprehensive platform that helps teams collaborate seamlessly and achieve more.
@@ -136,7 +136,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-400 text-sm">
-            © 2024 Platform. All rights reserved.
+            © 2024 Nexus. All rights reserved.
           </p>
           <div className="flex gap-6">
             <a

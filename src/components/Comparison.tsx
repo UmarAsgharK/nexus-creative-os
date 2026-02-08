@@ -8,47 +8,47 @@ const Comparison = () => {
   const [hoveredRow, setHoveredRow] = useState<number | null>(null)
 
   const features = [
-    { 
-      name: 'Real-time Collaboration', 
-      us: true, 
-      competitor1: true, 
+    {
+      name: 'Design-to-Code Sync',
+      us: true,
+      competitor1: false,
       competitor2: false,
-      description: 'Work together seamlessly with live updates and synchronized editing',
+      description: 'Bi-directional syncing between Figma and Git repositories',
     },
-    { 
-      name: 'Advanced Analytics', 
-      us: true, 
-      competitor1: false, 
+    {
+      name: 'AI Component Generation',
+      us: true,
+      competitor1: false,
       competitor2: true,
-      description: 'Deep insights with customizable dashboards and reporting',
+      description: 'Generate production-ready React/Vue components from images or prompts',
     },
-    { 
-      name: 'AI-Powered Automation', 
-      us: true, 
-      competitor1: false, 
+    {
+      name: 'Visual Version Control',
+      us: true,
+      competitor1: false,
       competitor2: false,
-      description: 'Intelligent automation that learns and adapts to your workflow',
+      description: 'Branch, merge, and diff design changes visually like Git',
     },
-    { 
-      name: 'Enterprise Security', 
-      us: true, 
-      competitor1: true, 
-      competitor2: true,
-      description: 'Bank-level encryption and compliance with industry standards',
-    },
-    { 
-      name: 'Custom Integrations', 
-      us: true, 
-      competitor1: false, 
+    {
+      name: 'Automated Documentation',
+      us: true,
+      competitor1: true,
       competitor2: false,
-      description: 'Build custom integrations with our flexible API',
+      description: 'Storybook and style guide auto-generated from your source',
     },
-    { 
-      name: '24/7 Support', 
-      us: true, 
-      competitor1: true, 
+    {
+      name: 'Framework Agnostic',
+      us: true,
+      competitor1: false,
+      competitor2: false,
+      description: 'Export to React, Vue, Svelte, Angular, iOS, and Android',
+    },
+    {
+      name: 'Enterprise Security',
+      us: true,
+      competitor1: true,
       competitor2: true,
-      description: 'Round-the-clock support from our expert team',
+      description: 'SOC 2 Type II, SSO, and on-premise deployment options',
     },
   ]
 
@@ -83,8 +83,8 @@ const Comparison = () => {
                   <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Feature</th>
                   <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900 bg-primary-50 border-x border-gray-200">
                     <div className="flex flex-col items-center gap-1">
-                      <span>Our Platform</span>
-                      <span className="text-xs font-normal text-primary-600">Best Choice</span>
+                      <span>Nexus</span>
+                      <span className="text-xs font-normal text-primary-600">Unified</span>
                     </div>
                   </th>
                   <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900">Competitor A</th>
@@ -100,33 +100,26 @@ const Comparison = () => {
                       initial={{ opacity: 0, x: -20 }}
                       animate={isInView ? { opacity: 1, x: 0 } : { opacity: 1, x: 0 }}
                       transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-                      className={`border-b border-gray-200 transition-colors cursor-pointer relative ${
-                        isHovered ? 'bg-primary-50/50' : 'hover:bg-gray-50'
-                      }`}
+                      className={`border-b border-gray-200 transition-colors cursor-pointer relative ${isHovered ? 'bg-primary-50/50' : 'hover:bg-gray-50'
+                        }`}
                       whileHover={{ x: 3 }}
                       onHoverStart={() => setHoveredRow(index)}
                       onHoverEnd={() => setHoveredRow(null)}
                     >
                       <td className="px-6 py-4">
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-2 group/cell">
                           <span className="text-sm font-medium text-gray-900">{feature.name}</span>
-                          {isHovered && (
-                            <motion.div
-                              initial={{ opacity: 0, scale: 0 }}
-                              animate={{ opacity: 1, scale: 1 }}
-                              className="group relative"
-                            >
-                              <Info className="w-4 h-4 text-gray-400" />
-                              <div className="absolute left-0 bottom-full mb-2 w-48 p-2 bg-gray-900 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">
-                                {feature.description}
-                              </div>
-                            </motion.div>
-                          )}
+                          <div className="relative opacity-0 group-hover/cell:opacity-100 transition-opacity duration-200">
+                            <Info className="w-4 h-4 text-gray-400" />
+                            <div className="absolute left-0 bottom-full mb-2 w-48 p-2 bg-gray-900 text-white text-xs rounded-lg opacity-0 group-hover/cell:opacity-100 transition-opacity pointer-events-none z-10">
+                              {feature.description}
+                            </div>
+                          </div>
                         </div>
                       </td>
                       <td className="px-6 py-4 text-center bg-primary-50/30 border-x border-gray-200">
                         {feature.us ? (
-                          <motion.div 
+                          <motion.div
                             className="flex justify-center"
                             initial={{ scale: 0 }}
                             animate={isInView ? { scale: 1 } : { scale: 1 }}
@@ -138,7 +131,7 @@ const Comparison = () => {
                             </div>
                           </motion.div>
                         ) : (
-                          <motion.div 
+                          <motion.div
                             className="flex justify-center"
                             initial={{ scale: 0 }}
                             animate={isInView ? { scale: 1 } : { scale: 1 }}
@@ -152,7 +145,7 @@ const Comparison = () => {
                       </td>
                       <td className="px-6 py-4 text-center">
                         {feature.competitor1 ? (
-                          <motion.div 
+                          <motion.div
                             className="flex justify-center"
                             initial={{ scale: 0 }}
                             animate={isInView ? { scale: 1 } : { scale: 1 }}
@@ -164,7 +157,7 @@ const Comparison = () => {
                             </div>
                           </motion.div>
                         ) : (
-                          <motion.div 
+                          <motion.div
                             className="flex justify-center"
                             initial={{ scale: 0 }}
                             animate={isInView ? { scale: 1 } : { scale: 1 }}
@@ -178,7 +171,7 @@ const Comparison = () => {
                       </td>
                       <td className="px-6 py-4 text-center">
                         {feature.competitor2 ? (
-                          <motion.div 
+                          <motion.div
                             className="flex justify-center"
                             initial={{ scale: 0 }}
                             animate={isInView ? { scale: 1 } : { scale: 1 }}
@@ -190,7 +183,7 @@ const Comparison = () => {
                             </div>
                           </motion.div>
                         ) : (
-                          <motion.div 
+                          <motion.div
                             className="flex justify-center"
                             initial={{ scale: 0 }}
                             animate={isInView ? { scale: 1 } : { scale: 1 }}

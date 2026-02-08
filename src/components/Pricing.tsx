@@ -10,55 +10,55 @@ const Pricing = () => {
 
   const plans = [
     {
-      name: 'Starter',
-      monthlyPrice: 29,
-      yearlyPrice: 24,
-      description: 'Perfect for small teams getting started',
+      name: 'Creator',
+      monthlyPrice: 0,
+      yearlyPrice: 0,
+      description: 'For individual designers and developers',
       features: [
-        'Up to 10 team members',
-        '5 AI-powered automations',
-        'Basic integrations',
-        'Email support',
-        '5GB storage',
-        'Basic analytics',
+        'Up to 3 Projects',
+        'Basic AI Integration',
+        'Community Support',
+        '1GB Storage',
+        'Public Projects',
+        'Basic Analytics',
       ],
-      cta: 'Start Free Trial',
+      cta: 'Start Creating',
       popular: false,
     },
     {
-      name: 'Professional',
-      monthlyPrice: 79,
-      yearlyPrice: 65,
-      description: 'For growing teams that need more power',
+      name: 'Studio',
+      monthlyPrice: 49,
+      yearlyPrice: 39,
+      description: 'For growing design teams and agencies',
       features: [
-        'Up to 50 team members',
-        'Unlimited AI automations',
-        'All integrations',
-        'Priority support',
-        '100GB storage',
-        'Advanced analytics',
-        'Custom workflows',
-        'API access',
+        'Unlimited Projects',
+        'Advanced AI Models',
+        'Priority Support',
+        '100GB Storage',
+        'Private Projects',
+        'Team Collaboration',
+        'Visual Version Control',
+        'Figma Sync',
       ],
       cta: 'Start Free Trial',
       popular: true,
     },
     {
-      name: 'Enterprise',
+      name: 'Agency',
       monthlyPrice: 199,
-      yearlyPrice: 165,
-      description: 'For large organizations with advanced needs',
+      yearlyPrice: 159,
+      description: 'For large organizations scaling design',
       features: [
-        'Unlimited team members',
-        'Unlimited everything',
-        'Custom integrations',
-        'Dedicated support',
-        'Unlimited storage',
-        'Enterprise analytics',
-        'Custom workflows',
-        'Advanced security',
-        'SSO & compliance',
-        'Custom training',
+        'Unlimited Everything',
+        'Custom AI Models',
+        'Dedicated Success Manager',
+        'Unlimited Storage',
+        'SSO & Advanced Security',
+        'Audit Logs',
+        'API Access',
+        'White Labeling',
+        'Custom Contracts',
+        '24/7 Phone Support',
       ],
       cta: 'Contact Sales',
       popular: false,
@@ -88,14 +88,12 @@ const Pricing = () => {
             </span>
             <button
               onClick={() => setIsYearly(!isYearly)}
-              className={`relative w-14 h-8 rounded-full transition-colors duration-300 ${
-                isYearly ? 'bg-primary-600' : 'bg-gray-300'
-              }`}
+              className={`relative w-14 h-8 rounded-full transition-colors duration-300 ${isYearly ? 'bg-primary-600' : 'bg-gray-300'
+                }`}
             >
               <span
-                className={`absolute top-1 left-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${
-                  isYearly ? 'translate-x-6' : 'translate-x-0'
-                }`}
+                className={`absolute top-1 left-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${isYearly ? 'translate-x-6' : 'translate-x-0'
+                  }`}
               />
             </button>
             <span className={`font-medium ${isYearly ? 'text-gray-900' : 'text-gray-500'}`}>
@@ -116,11 +114,10 @@ const Pricing = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className={`relative bg-white rounded-xl p-6 border-2 transition-all duration-300 flex flex-col cursor-pointer ${
-                plan.popular
+              className={`relative bg-white rounded-xl p-6 border-2 transition-all duration-300 flex flex-col cursor-pointer ${plan.popular
                   ? 'border-primary-600 shadow-lg scale-105'
                   : 'border-gray-200 shadow-sm hover:shadow-md'
-              }`}
+                }`}
               whileHover={{ y: -5, scale: plan.popular ? 1.08 : 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -166,11 +163,10 @@ const Pricing = () => {
 
               <motion.a
                 href="#"
-                className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 mt-auto ${
-                  plan.popular
+                className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 mt-auto ${plan.popular
                     ? 'bg-primary-600 text-white hover:bg-primary-700'
                     : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                }`}
+                  }`}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >

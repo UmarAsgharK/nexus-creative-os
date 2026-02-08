@@ -9,38 +9,38 @@ const WhyChooseUs = () => {
 
   const reasons = [
     {
-      icon: DollarSign,
-      title: 'Cost-Effective Solutions',
-      description: 'We prioritize budget-friendly strategies without compromising quality, ensuring you maximize ROI while minimizing overhead.',
+      icon: TrendingUp,
+      title: 'Accelerated Velocity',
+      description: 'Ship products 50% faster by removing the friction between design and engineering. No more redlines, no more back-and-forth.',
       points: [
-        'Flexible pricing that scales with your business',
-        'No hidden fees or surprise charges',
-        'Transparent cost breakdown',
-        'ROI tracking and reporting',
+        'Automated asset generation',
+        'Instant code export',
+        'Real-time prototyping',
+        'Reduced QA cycles',
       ],
       color: 'from-emerald-600 to-green-600',
     },
     {
-      icon: TrendingUp,
-      title: 'Future-Ready Workflows',
-      description: 'Our implementations are designed to adapt to your evolving needs, ensuring seamless scalability as your business grows.',
+      icon: CheckCircle2,
+      title: 'Pixel-Perfect Consistency',
+      description: 'Ensure your brand looks exactly as intended across every touchpoint. Our AI enforces design system rules automatically.',
       points: [
-        'Scalable architecture from day one',
-        'Regular feature updates included',
-        'Backward compatibility guaranteed',
-        'Migration support when needed',
+        'Global style synchronization',
+        'Automated accessibility checks',
+        'Multi-platform support',
+        'Visual regression testing',
       ],
       color: 'from-blue-600 to-cyan-600',
     },
     {
       icon: Award,
-      title: 'Proven Expertise',
-      description: 'From workflow automation to tailored dashboards, we follow industry best practices to streamline processes and reduce inefficiencies.',
+      title: 'Enterprise Scalability',
+      description: 'Built to handle complex design systems and large teams. scale from a single product to a multi-brand ecosystem.',
       points: [
-        '10+ years of industry experience',
-        'Certified implementation specialists',
-        'Best practice methodologies',
-        'Continuous improvement approach',
+        'Multi-repo support',
+        'Granular permissions',
+        'Audit logs & history',
+        'SSO & Enterprise support',
       ],
       color: 'from-primary-500 to-primary-600',
     },
@@ -57,10 +57,10 @@ const WhyChooseUs = () => {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Why Choose <span className="text-primary-600">Us</span>?
+            Why Choose <span className="text-primary-600">Nexus</span>?
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            We're your partners in building future-ready workflows that grow alongside your business.
+            The only platform that treats design and code as a single source of truth.
           </p>
         </motion.div>
 
@@ -72,11 +72,10 @@ const WhyChooseUs = () => {
               <button
                 key={index}
                 onClick={() => setActiveTab(index)}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 ${
-                  activeTab === index
-                    ? 'bg-primary-600 text-white shadow-lg'
-                    : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
-                }`}
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 ${activeTab === index
+                  ? 'bg-primary-600 text-white shadow-lg'
+                  : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
+                  }`}
               >
                 <Icon size={18} />
                 <span className="hidden sm:inline">{reason.title}</span>
@@ -95,7 +94,7 @@ const WhyChooseUs = () => {
         >
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <motion.div 
+              <motion.div
                 className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${reasons[activeTab].color} flex items-center justify-center mb-6`}
                 whileHover={{ scale: 1.15, rotate: 5 }}
                 transition={{ duration: 0.3 }}

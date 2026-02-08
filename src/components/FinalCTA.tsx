@@ -15,10 +15,10 @@ const FinalCTA = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Ready to Transform Your Workflow?
+            Stop Handoff Headaches
           </h2>
           <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-2xl mx-auto">
-            Join thousands of teams already using our platform to collaborate smarter and achieve more.
+            Join the 10,000+ teams who have merged design and engineering into a single workflow.
           </p>
           <motion.a
             href="#"

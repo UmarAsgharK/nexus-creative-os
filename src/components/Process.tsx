@@ -73,27 +73,25 @@ const Process = () => {
                   key={index}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 1, scale: 1 }}
-                  transition={{ 
-                    duration: 0.6, 
+                  transition={{
+                    duration: 0.6,
                     delay: index * 0.15,
                     type: 'spring',
                     stiffness: 100
                   }}
                   className="relative"
                 >
-                  <motion.div 
-                    className={`bg-white rounded-2xl p-6 border-2 transition-all duration-300 text-center cursor-pointer overflow-hidden ${
-                      isSelected ? 'border-primary-600 shadow-xl' : 'border-gray-200 hover:border-primary-600/50 hover:shadow-lg'
-                    }`}
+                  <motion.div
+                    className={`bg-white rounded-2xl p-6 border-2 transition-all duration-300 text-center cursor-pointer relative ${isSelected ? 'border-primary-600 shadow-xl' : 'border-gray-200 hover:border-primary-600/50 hover:shadow-lg'
+                      }`}
                     whileHover={{ y: -5, scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     onClick={() => setSelectedStep(isSelected ? null : index)}
                   >
                     {/* Number Badge */}
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <div className={`w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg ${
-                        isSelected ? 'bg-primary-600' : 'bg-gray-400'
-                      }`}>
+                      <div className={`w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg ${isSelected ? 'bg-primary-600' : 'bg-gray-400'
+                        }`}>
                         {index + 1}
                       </div>
                     </div>
@@ -113,7 +111,7 @@ const Process = () => {
                     <p className="text-gray-600 leading-relaxed text-sm mb-3">
                       {step.description}
                     </p>
-                    
+
                     {/* Duration Badge */}
                     <div className="inline-flex items-center gap-1 px-3 py-1 bg-gray-100 rounded-full text-xs font-medium text-gray-700 mb-3">
                       <Info size={12} />

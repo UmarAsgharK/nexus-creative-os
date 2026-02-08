@@ -1,4 +1,4 @@
-import { motion, useInView, AnimatePresence } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
 import { Target, BarChart3, Zap, CheckCircle2, ArrowRight } from 'lucide-react'
 
@@ -74,7 +74,7 @@ const UseCases = () => {
               >
                 <div className="p-8">
                   <div className="flex items-start justify-between mb-6">
-                    <motion.div 
+                    <motion.div
                       className={`w-16 h-16 rounded-xl bg-gradient-to-br ${useCase.color} flex items-center justify-center flex-shrink-0`}
                       whileHover={{ scale: 1.1, rotate: -5 }}
                       transition={{ duration: 0.3 }}
@@ -94,35 +94,20 @@ const UseCases = () => {
                   <p className="text-gray-600 leading-relaxed mb-4">
                     {useCase.description}
                   </p>
-                  <AnimatePresence>
-                    {isHovered && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="overflow-hidden"
-                      >
-                        <div className="pt-4 border-t border-gray-100">
-                          <p className="text-sm font-semibold text-gray-700 mb-3">Key Capabilities:</p>
-                          <ul className="space-y-2">
-                            {useCase.examples.map((example, i) => (
-                              <motion.li
-                                key={i}
-                                initial={{ opacity: 0, x: -10 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                transition={{ delay: i * 0.05 }}
-                                className="flex items-center gap-2 text-sm text-gray-600"
-                              >
-                                <div className={`w-1.5 h-1.5 rounded-full bg-gradient-to-br ${useCase.color}`} />
-                                {example}
-                              </motion.li>
-                            ))}
-                          </ul>
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                  <div className="pt-4 border-t border-gray-100">
+                    <p className="text-sm font-semibold text-gray-700 mb-3">Key Capabilities:</p>
+                    <ul className="space-y-2">
+                      {useCase.examples.map((example, i) => (
+                        <li
+                          key={i}
+                          className="flex items-center gap-2 text-sm text-gray-600"
+                        >
+                          <div className={`w-1.5 h-1.5 rounded-full bg-gradient-to-br ${useCase.color}`} />
+                          {example}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </motion.div>
             )

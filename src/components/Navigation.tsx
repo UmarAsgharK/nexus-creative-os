@@ -25,11 +25,10 @@ const Navigation = () => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        isScrolled
+      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${isScrolled
           ? 'bg-white/95 backdrop-blur-md shadow-md border-b border-gray-100'
           : 'bg-white/90 backdrop-blur-sm'
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
@@ -41,10 +40,10 @@ const Navigation = () => {
             whileTap={{ scale: 0.95 }}
           >
             <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center shadow-lg">
-              <span className="text-white font-bold text-xl">P</span>
+              <span className="text-white font-bold text-xl">N</span>
             </div>
             <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
-              Platform
+              Nexus
             </span>
           </motion.a>
 

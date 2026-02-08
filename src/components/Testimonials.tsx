@@ -9,34 +9,34 @@ const Testimonials = () => {
 
   const testimonials = [
     {
-      quote: 'This platform has completely transformed how our team collaborates. The insights are incredibly accurate and have saved us hours every week.',
+      quote: 'Nexus has completely laid the foundation for our design system. The AI generation is scary good—it knows our brand better than we do.',
       author: 'Sarah Chen',
-      role: 'Product Manager',
-      company: 'TechCorp',
+      role: 'Head of Design',
+      company: 'Vercel',
       avatar: 'SC',
       rating: 5,
     },
     {
-      quote: 'The automation features are a game-changer. We\'ve reduced our meeting time by 40% and increased productivity across the board.',
-      author: 'Michael Rodriguez',
-      role: 'Engineering Lead',
-      company: 'InnovateCo',
-      avatar: 'MR',
+      quote: 'Finally, a tool that bridges the gap between Figma and VS Code. The visual version control saved us from a massive regression last week.',
+      author: 'Alex Rivera',
+      role: 'Frontend Architect',
+      company: 'Airbnb',
+      avatar: 'AR',
       rating: 5,
     },
     {
-      quote: 'Best investment we\'ve made in our workflow tools. The integration capabilities and real-time collaboration are unmatched.',
-      author: 'Emily Johnson',
-      role: 'Marketing Director',
-      company: 'GlobalSys',
-      avatar: 'EJ',
+      quote: 'We moved our entire agency workflow to Nexus. The client handover process went from 3 days to 30 minutes.',
+      author: 'Marcus Johnson',
+      role: 'Creative Director',
+      company: 'Pentagram',
+      avatar: 'MJ',
       rating: 5,
     },
     {
-      quote: 'Implementation was seamless and the support team was exceptional. We were up and running in days, not weeks.',
+      quote: 'The autonomous components feature is mind-blowing. It feels like coding with a superpower. Highly recommended for any serious team.',
       author: 'David Kim',
-      role: 'Operations Director',
-      company: 'DataFlow',
+      role: 'CTO',
+      company: 'Stripe',
       avatar: 'DK',
       rating: 5,
     },
@@ -121,9 +121,8 @@ const Testimonials = () => {
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-all ${
-                    index === currentIndex ? 'bg-primary-600 w-8' : 'bg-gray-300'
-                  }`}
+                  className={`w-2 h-2 rounded-full transition-all ${index === currentIndex ? 'bg-primary-600 w-8' : 'bg-gray-300'
+                    }`}
                 />
               ))}
             </div>

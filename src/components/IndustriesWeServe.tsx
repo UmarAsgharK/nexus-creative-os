@@ -9,46 +9,46 @@ const IndustriesWeServe = () => {
 
   const industries = [
     {
-      icon: Building2,
-      title: 'Construction and Real Estate',
-      description: 'Optimize project timelines, resource allocation, and client communication with custom workflows designed specifically for the construction and real estate industries.',
+      icon: Wrench,
+      title: 'Design Ops',
+      description: 'Streamline your design system governance and distribution. Keep everyone aligned with a single source of truth.',
       color: 'from-amber-600 to-orange-600',
-      details: 'Track projects from bid to completion, manage subcontractors, handle permits and inspections, and maintain client relationships all in one platform.',
+      details: 'Automate token distribution, manage component libraries, and track adoption across your organization.',
     },
     {
-      icon: Wrench,
-      title: 'Professional Services',
-      description: 'Simplify service scheduling, team coordination, and client management for faster resolution and happier clients.',
+      icon: Building2,
+      title: 'Product Teams',
+      description: 'Move from concept to ship faster than ever. Prototype with real code components and validate ideas instantly.',
       color: 'from-blue-600 to-indigo-600',
-      details: 'Schedule appointments, dispatch technicians, track service history, manage inventory, and process payments efficiently.',
+      details: 'Connect design to development, run user tests on production-ready code, and iterate with confidence.',
     },
     {
       icon: Shield,
-      title: 'Insurance',
-      description: 'Streamline claims management, policy administration, and customer service workflows with specialized solutions.',
+      title: 'Enterprise',
+      description: 'Scale your design system across multiple brands and products with enterprise-grade security and control.',
       color: 'from-emerald-600 to-teal-600',
-      details: 'Process claims faster, manage policies, track renewals, handle underwriting, and provide excellent customer service.',
+      details: 'SSO, Audit logs, Role-based access control, and dedicated support for large organizations.',
     },
     {
       icon: Sun,
-      title: 'Solar Installation',
-      description: 'Track installations, inventory management, and production cycles in real-time to boost productivity and reduce delays.',
+      title: 'Startups',
+      description: 'Build your MVP with professional polish from day one. Nexus gives you a world-class design system out of the box.',
       color: 'from-yellow-600 to-orange-600',
-      details: 'Manage installation projects, track equipment inventory, schedule maintenance, and monitor system performance.',
+      details: 'Access premium component libraries, automated branding, and rapid prototyping tools.',
     },
     {
       icon: Factory,
-      title: 'Manufacturing',
-      description: 'Optimize production schedules, quality control processes, and supply chain management with intelligent workflows.',
+      title: 'Engineering',
+      description: 'Stop guessing CSS values. Get production-ready code for React, Vue, Svelte, and more directly from the design.',
       color: 'from-gray-600 to-gray-700',
-      details: 'Track production lines, manage quality control, optimize inventory, coordinate suppliers, and ensure compliance.',
+      details: 'Clean code generation, type safety, and seamless integration with your existing CI/CD pipeline.',
     },
     {
       icon: Home,
-      title: 'Property Management',
-      description: 'Manage properties, tenants, maintenance requests, and financial records all in one place.',
+      title: 'Marketing',
+      description: 'Launch landing pages and campaigns independently while staying 100% on-brand.',
       color: 'from-purple-600 to-pink-600',
-      details: 'Handle tenant applications, track leases, manage maintenance requests, process rent payments, and generate financial reports.',
+      details: 'Visual page builder powered by your design system, A/B testing, and built-in analytics.',
     },
   ]
 
@@ -63,10 +63,10 @@ const IndustriesWeServe = () => {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Industries We Serve
+            Built for Modern Teams
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Trusted by businesses across diverse industries with specialized solutions for each sector.
+            Whether you're a startup or a global enterprise, Nexus adapts to your workflow.
           </p>
         </motion.div>
 
@@ -88,7 +88,7 @@ const IndustriesWeServe = () => {
               >
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-4">
-                    <motion.div 
+                    <motion.div
                       className={`w-14 h-14 rounded-xl bg-gradient-to-br ${industry.color} flex items-center justify-center flex-shrink-0`}
                       whileHover={{ scale: 1.15, rotate: 10 }}
                       transition={{ duration: 0.3 }}

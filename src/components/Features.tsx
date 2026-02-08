@@ -18,44 +18,44 @@ const Features = () => {
   const features = [
     {
       icon: Brain,
-      title: 'Intelligent Insights',
-      description: 'Get smart recommendations and insights that help your team make data-driven decisions faster.',
-      details: 'Our AI analyzes patterns in your workflow, identifies optimization opportunities, and provides actionable recommendations. The system learns from your team\'s behavior to deliver increasingly accurate insights over time.',
+      title: 'AI-Powered Asset Gen',
+      description: 'Generate high-fidelity assets from natural language prompts directly within your workspace.',
+      details: 'Nexus learns your brand style guide and generates UI components, icons, and layout variations that perfectly match your design system.',
       color: 'from-purple-600 to-indigo-600',
     },
     {
       icon: Users,
-      title: 'Real-time Collaboration',
-      description: 'Work together seamlessly with live updates, comments, and notifications that keep everyone in sync.',
-      details: 'See changes as they happen with real-time synchronization across all devices. Comment threads, @mentions, and instant notifications ensure nothing falls through the cracks.',
+      title: 'Live Design Sync',
+      description: 'Bridging the gap between Figma and Code. Changes in design reflect instantly in production.',
+      details: 'Bi-directional syncing means developers and designers are finally looking at the same source of truth. No more "handover" meetings.',
       color: 'from-blue-600 to-cyan-600',
     },
     {
       icon: Zap,
-      title: 'Smart Automation',
-      description: 'Automate repetitive tasks and workflows with intelligence that learns from your team\'s patterns.',
-      details: 'Create custom automation rules with our visual builder. The system suggests automations based on your usage patterns and can handle complex multi-step workflows.',
+      title: 'Visual Version Control',
+      description: 'Git for designers. Branch, merge, and revert design changes visually.',
+      details: 'Track every pixel change with visual diffs. Review branches in a collaborative environment before merging to the master design system.',
       color: 'from-amber-600 to-orange-600',
     },
     {
       icon: Puzzle,
-      title: 'Seamless Integration',
-      description: 'Connect with all your favorite tools - Slack, Jira, GitHub, and 100+ more integrations available.',
-      details: 'Native integrations with popular tools mean data flows automatically. Set up once and watch your tools work together seamlessly without manual data entry.',
+      title: 'Component Autonomy',
+      description: 'Smart components that adapt to content and context automatically.',
+      details: 'Our autonomous components resize, reflow, and restyle themselves based on real data, saving you from creating 50 variants for one button.',
       color: 'from-emerald-600 to-green-600',
     },
     {
       icon: BarChart3,
-      title: 'Advanced Analytics',
-      description: 'Track performance, identify bottlenecks, and optimize workflows with comprehensive analytics.',
-      details: 'Deep-dive analytics with customizable dashboards, export capabilities, and scheduled reports. Track KPIs, team performance, and project health in real-time.',
+      title: 'UX Analytics',
+      description: 'Heatmaps and user journey tracking built directly into your prototypes.',
+      details: 'Get real user feedback on your designs before writing a single line of code. Identify friction points with AI-analysis of user sessions.',
       color: 'from-indigo-600 to-purple-600',
     },
     {
       icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level encryption, SSO, and compliance with SOC 2, GDPR, and HIPAA standards.',
-      details: 'Your data is encrypted at rest and in transit. Regular security audits, compliance certifications, and granular access controls give you complete control.',
+      title: 'Asset Protection',
+      description: 'Watermarking and rights management for all your creative assets.',
+      details: 'Automatically secure your intellectual property. Set usage rights and expiration dates for shared assets with external clients.',
       color: 'from-red-600 to-rose-600',
     },
   ]
@@ -93,7 +93,7 @@ const Features = () => {
               >
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-4">
-                    <motion.div 
+                    <motion.div
                       className={`w-12 h-12 rounded-lg bg-gradient-to-br ${feature.color} flex items-center justify-center flex-shrink-0`}
                       whileHover={{ rotate: [0, -10, 10, 0], scale: 1.1 }}
                       transition={{ duration: 0.4 }}
