@@ -13,11 +13,10 @@ const Integrations = () => {
     { name: 'Gmail', icon: Mail, color: 'from-red-500 to-pink-500' },
     { name: 'Calendar', icon: Calendar, color: 'from-blue-500 to-cyan-500' },
     { name: 'Docs', icon: FileText, color: 'from-green-500 to-emerald-500' },
-    { name: 'Docs', icon: FileText, color: 'from-green-500 to-emerald-500' },
   ]
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 dark-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -26,15 +25,15 @@ const Integrations = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Integrations
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Connect with 100+ popular tools and services
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
           {integrations.map((integration, index) => {
             const Icon = integration.icon
             return (
@@ -49,13 +48,13 @@ const Integrations = () => {
                   stiffness: 200
                 }}
                 whileHover={{ scale: 1.1, y: -5 }}
-                className="bg-white rounded-xl p-6 border border-gray-200 hover:border-primary-600/50 hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-center aspect-square cursor-pointer"
+                className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 hover:bg-white/10 hover:shadow-2xl transition-all duration-300 flex flex-col items-center justify-center aspect-square cursor-pointer group"
                 whileTap={{ scale: 0.95 }}
               >
-                <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${integration.color} flex items-center justify-center mb-3`}>
+                <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${integration.color} flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                   <Icon className="text-white" size={24} />
                 </div>
-                <span className="text-sm font-medium text-gray-700 text-center">{integration.name}</span>
+                <span className="text-sm font-medium text-gray-300 group-hover:text-white transition-colors">{integration.name}</span>
               </motion.div>
             )
           })}

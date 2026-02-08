@@ -59,7 +59,7 @@ const Testimonials = () => {
   }
 
   return (
-    <section id="testimonials" ref={ref} className="pt-20 pb-8 dark-section">
+    <section id="testimonials" ref={ref} className="pt-20 pb-8 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -67,10 +67,10 @@ const Testimonials = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Loved by Teams Worldwide
           </h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             See what teams are saying about our platform
           </p>
         </motion.div>
