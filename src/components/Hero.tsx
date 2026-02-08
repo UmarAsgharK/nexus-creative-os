@@ -39,7 +39,7 @@ const Hero = () => {
               <div className="inline-flex items-center space-x-2 px-4 py-2 bg-primary-500/20 backdrop-blur-sm border border-primary-500/40 rounded-full mb-8">
                 <Sparkles size={14} className="text-primary-300" />
                 <span className="text-sm font-medium text-primary-100">
-                  Now with Advanced Integration
+                  New: Visual Version Control 2.0
                 </span>
               </div>
             </motion.div>
@@ -48,9 +48,9 @@ const Hero = () => {
               variants={itemVariants}
               className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight"
             >
-              Transform Your Workflow with{' '}
+              The Creative OS for{' '}
               <span className="text-gradient bg-gradient-to-r from-primary-400 via-primary-500 to-primary-600 bg-clip-text text-transparent">
-                Intelligent Solutions
+                Modern Teams
               </span>
             </motion.h1>
 
@@ -58,7 +58,7 @@ const Hero = () => {
               variants={itemVariants}
               className="text-xl md:text-2xl text-gray-300 mb-10 leading-relaxed max-w-2xl"
             >
-              Streamline operations, enhance collaboration, and unlock new levels of productivity with our comprehensive platform designed for modern teams.
+              Nexus bridges the gap between design and engineering. Generate production-ready code, manage design tokens, and ship faster—all from one source of truth.
             </motion.p>
 
             <motion.div
@@ -71,7 +71,7 @@ const Hero = () => {
                 whileHover={{ scale: 1.02, boxShadow: '0 20px 40px rgba(249,115,22,0.4)' }}
                 whileTap={{ scale: 0.98 }}
               >
-                Get Started
+                Start Creating
               </motion.a>
               <motion.a
                 href="#"
@@ -80,14 +80,14 @@ const Hero = () => {
                 whileTap={{ scale: 0.98 }}
               >
                 <Play size={18} fill="currentColor" />
-                Watch Demo
+                View Demo
               </motion.a>
             </motion.div>
 
             <motion.div variants={itemVariants} className="flex items-center gap-6 text-sm text-gray-400">
               <div>Trusted by</div>
               <div className="flex items-center gap-6 opacity-70">
-                {['TechCorp', 'InnovateCo', 'GlobalSys', 'DataFlow'].map((company, i) => (
+                {['Vercel', 'Stripe', 'Airbnb', 'Linear'].map((company, i) => (
                   <div key={i} className="text-white font-medium">
                     {company}
                   </div>
@@ -113,7 +113,7 @@ const Hero = () => {
                     </div>
                     <div className="text-white/60 text-sm">Dashboard</div>
                   </div>
-                  
+
                   <div className="grid grid-cols-3 gap-3">
                     {[1, 2, 3, 4, 5, 6].map((i) => (
                       <motion.div
